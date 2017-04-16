@@ -1,0 +1,22 @@
+<%- include('partials/head.ejs') %>
+    <nav>
+        <ul>
+            <li><a href="/dashboard">Terug</a></li>
+        </ul>
+    </nav>
+
+    <% for (var i = 0; i < data.length; i++) { %>
+        <h3><%= data[i].naam %></h3>
+        <a href="/profiel?id=<%= data[i].ID %> "><img src="../uploads/<%= data[i].foto %>" alt=""></a>
+        <p>
+            <%= data[i].geslacht %>
+        </p>
+        <br>
+        <label for="">Acties:</label>
+        <br>
+            <a href="/blokkeerpersoon?id=<%= data[i].ID %>">Blokkeer gebruiker <%= data[i].ID %></a>
+            <a href="/verwijderpersoon?id=<%= data[i].ID %>">Verwijder gebruiker <%= data[i].ID %></a>
+        <br>
+        <% } %>
+
+    <%- include('partials/foot.ejs') %>

@@ -1,0 +1,28 @@
+<%- include('partials/head.ejs') %>
+    <header>
+        <h1>Serious dating</h1>
+        <div class="space">
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/jouwprofiel"><button>Jouw profiel</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Jouw matches</h1>
+    <div class="matchcontainer">
+        <% for (var i = 0; i < resultmatch.length; i++) { %>
+            <div class="matchdiv">
+                <h3><%= resultmatch[i].naam %></h3>
+                <a href="/profiel/<%= resultmatch[i].ID %> "><img src="uploads/<%= resultmatch[i].foto %>" alt=""></a>
+                <p>
+                    <%= resultmatch[i].geslacht %>
+                </p>
+                <br>
+            </div>
+        <% } %>
+    </div>
+
+
+            <%- include('partials/foot.ejs') %>

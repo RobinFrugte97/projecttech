@@ -1,0 +1,69 @@
+<%- include('partials/head.ejs') %>
+    <header>
+        <h1>Serious dating</h1>
+    </header>
+    <h1>Vul jouw informatie in!</h1>
+    <form action="" method="post" class="registreren">
+        <fieldset id="stap1" class="">
+            <p>stap 1 van 3</p>
+            <h2>Jouw gegevens</h2>
+            <label for="">Naam:</label>
+            <input type="text" name="naam">
+            <br>
+            <label for="">Geboortedatum:</label>
+            <input type="date" name="geboortedatum">
+            <br>
+            <label for="">Geslacht</label>
+            <select name="geslacht" id="">
+                <option value="Man">Man</option>
+                <option value="Vrouw">Vrouw</option>
+                <option value="Anders">Anders</option>
+            </select>
+            <br>
+            <div id="naarstap2klik"><p>Verder</p></div>
+
+        </fieldset>
+        <fieldset id="stap2" class="">
+            <p>stap 2 van 3</p>
+            <h2>Account gegevens</h2>
+            <label for="">E-mailadres:</label>
+            <input type="text" name="username" id="email">
+            <p id="takenuser" class="verberg">Username is al in gebruik</p>
+            <br>
+            <label for="">Wachtwoord:</label>
+            <input type="password" name="password" required pattern=".{6,25}">
+            <br>
+            <label for="">Herhaal je wachtwoord:</label>
+            <input type="password" required pattern=".{6,25}">
+            <br>
+            <label for="">Woonplaats:</label>
+            <input type="text" name="woonplaats">
+            <br>
+            <div id="naarstap3klik"><p>Verder</p></div>
+            <div id="terugnaarstap1"><p>Terug</p></div>
+        </fieldset>
+        <fieldset id="stap3" class="">
+            <p>stap 3 van 3</p>
+            <h2>Begin je zoektocht!</h2>
+            <h3>Ik ben opzoek naar....</h3>
+            <label for="">Geslacht</label>
+            <select name="opzoekgeslacht" id="">
+                <option value="Man">Man</option>
+                <option value="Vrouw">Vrouw</option>
+                <option value="Anders">Anders</option>
+            </select>
+            <br>
+            <fieldset>
+                <label for="">Leeftijd:</label>
+                <br>
+                <label for="">Van</label>
+                <input type="number" name="minleeftijd" pattern=".{18,100}">
+                <label for="">Tot</label>
+                <input type="number" name="maxleeftijd" pattern=".{18,100}">
+            </fieldset>
+            <br>
+            <button>Verder</button>
+            <div id="terugnaarstap2"><p>Terug</p></div>
+        </fieldset>
+    </form>
+    <%- include('partials/foot.ejs') %>

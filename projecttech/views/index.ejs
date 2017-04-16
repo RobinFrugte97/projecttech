@@ -1,0 +1,39 @@
+<%- include('partials/head.ejs') %>
+    <div id="background">
+        <div id="overlay">
+            <div class="column">
+              <h1>Serious dating</h1>
+              <p>
+                - Zoek je iemand waarmee jij je leven wilt delen?
+                Ben je opzoek naar een serieuze relatie?
+                Vind nu je match voor het leven! -
+              </p>
+            </div>
+            <form action="/registreren" method="get">
+              <h1>Meld je aan...</h1>
+                <fieldset>
+                    <h2>Registreer om je zoektocht te beginnen!</h2>
+                    <button>Registreer</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+
+    <br>
+
+    <form action="" method="post" class="index">
+      <h2>Log in!</h2>
+        <fieldset>
+            <div class="inlogdiv">
+              <label for="">Email:</label>
+              <input type="text" name="username">
+
+              <label for="">Wachtwoord:</label>
+              <input type="password" name="password">
+            </div>
+            <br>
+            <button>Inloggen</button>
+        </fieldset>
+    </form>
+    <%- include('partials/foot.ejs') %>

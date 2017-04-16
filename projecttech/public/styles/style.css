@@ -1,0 +1,554 @@
+/*csslint order-alphabetical: false, box-model: false, outline-none: false, universal-selector:false, box-sizing:false, ids:false, qualified-headings:false, unique-headings:false, fallback-colors:false, */
+
+
+/*
+========================================================
+    BROWSER RESET - gebaseerd op html5 doctor css reset
+     http://html5doctor.com/html-5-reset-stylesheet
+========================================================
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    display: block
+}
+
+nav ul {
+    list-style: none
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0
+}
+
+input,
+select {
+    vertical-align: middle
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+/*EINDE BROWSER RESET*/
+
+/**algemeen**/
+
+* {
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Helvetica', sans-serif;
+}
+
+body {
+  background-color: #f9efef;
+  font-family: 'Helvetica', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding: 1em;
+}
+
+main.profiel {
+  align-self: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  width: 100%;
+  background-color: #ff5b69;
+  height: 5em;
+  margin-bottom: 1em;
+  padding: 1em;
+  padding-bottom: 2em;
+}
+
+header .space {
+  flex-grow: 3;
+}
+
+header h1 {
+  color: white;
+}
+
+header nav {
+  float: right;
+}
+
+header li {
+  display: inline !important;
+}
+
+img {
+  max-width: 250px;
+  align-self: center;
+}
+
+h1 {
+  font-family: 'Helvetica', sans-serif;
+  color: black;
+  align-self: center;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+h2 {
+  align-self: center;
+  color: #ff5b69;
+}
+
+form {
+  margin-left, margin-right: .5em;
+  align-self: center;
+  width: 75%;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: row;
+  padding-left: .5em;
+  padding-right: .5em;
+  align-self: center;
+  align-content: center;
+  background-color: #f9efef;
+  margin-top: .375em;
+  margin-bottom: .375em;
+  border: none;
+  padding: .5em;
+}
+
+fieldset#stap1 > h2 {
+  align-self: center;
+}
+
+#stap2 {
+
+}
+
+#stap3 {
+
+}
+
+input {
+  border: none;
+  height: 2em;
+}
+
+button {
+    background-color: #ff5b69;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 9em;
+    font-size: 1.125em;
+    padding-bottom: .5em;
+    padding-top: .5em;
+}
+
+.rechtsbericht {
+  display: block;
+  list-style-type: none;
+  float: right;
+  background-color: lightgreen;
+  border-radius: 5%;
+  padding: .3em;
+  width: 66%;
+  margin-bottom: 1em;
+}
+
+.linksbericht {
+  display: block;
+  list-style-type: none;
+  float: left;
+  background-color: lightblue;
+  border-radius: 5%;
+  padding: .3em;
+  width: 66%;
+  margin-bottom: 1em;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav {
+  max-width: 30em;
+  align-self: center;
+}
+
+/** index **/
+
+div#overlay {
+  background-color: rgba(255, 91, 91, 0.2);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+div.column {
+  display: flex column;
+}
+
+div#background {
+  display: flex;
+  background-image: url("../images/datingachtergrond.jpg"); /* afbeelding bron: https://www.dateplaats.nl/nieuws */
+  height: 45%;
+  width: 100%;
+  align-self: center;
+  background-size: cover;
+}
+
+div#background p {
+  font-size: 1.25em;
+  color: white;
+  max-width: 22.5em;
+  margin-top: 10%;
+  margin-left: 2.5em;
+  line-height: 135%;
+}
+
+div.column > h1 {
+  font-size: 2.5em;
+  color: #ff5b69 !important;
+  margin-top: 2.9em !important;
+  margin-left: 1.5em !important;
+  letter-spacing: 120% !important;
+}
+
+div#background form {
+  align-self: center;
+  max-width: 30%;
+  background-color: none;
+  float: right;
+  margin-left: 20%;
+  margin-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+div#background fieldset {
+  background: none;
+}
+
+div#background h1 {
+  padding-left: .2em;
+  color: white;
+  margin-top: 0;
+}
+
+div#background h2 {
+  font-size: 1.25em;
+}
+
+div#background button {
+  margin-top: 4em;
+}
+
+.index input {
+  width: 9em;
+  margin-right: 1em;
+  margin-left: .25em;
+}
+
+.index label {
+  padding-top: .2em;
+  font-size: 1.125em;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 35%;
+  height: 20em;
+}
+
+.index h2 {
+
+}
+
+.index button {
+  width: 9em;
+  margin-left: 30%;
+  align-content: center;
+}
+
+.index fieldset {
+  align-content: center;
+}
+
+.inlogdiv {
+  padding-top: 2.5em;
+  padding-bottom: 1.5em;
+  display: flex;
+  flex-direction: row;
+}
+
+/** einde index **/
+
+/**registreren**/
+
+.stap1,
+.stap2,
+.stap3 {
+  display: block;
+}
+
+.staphidden {
+  display: none;
+}
+
+div#terugnaarstap1,
+div#terugnaarstap2,
+div#naarstap2klik,
+div#naarstap3klik {
+  background-color: #ff5b69 !important;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 9em;
+  font-size: 1.125em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-top: 1em;
+  margin-bottom: 1em;
+}
+
+form.registreren {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+form.registreren input {
+  align-self: flex-end;
+  margin-bottom: 1em;
+}
+
+
+/**einde registreren**/
+
+/**chat**/
+
+div.chat {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 30em;
+  align-self: center;
+  padding: .5em;
+  background-color: darkgrey;
+  margin-bottom: 1em;
+}
+
+div.chat input {
+  width: 175%;
+  float: left;
+  height: 2.5em;
+  margin-left: 0;
+}
+
+form.bleh {
+  display: flex;
+  flex-direction: row;
+}
+
+div.chat button {
+  float: right;
+  border: none;
+  padding-right: .5em;
+  padding-left: .5em;
+  padding-top: .25em;
+  padding-bottom: .25em;
+  width: 25%;
+  height: 2em;
+  background-color: #ff5b69;
+  color: white;
+  font-size: 1em;
+  margin-right: 2em;
+  margin-top: 0em;
+}
+
+div.chatberichten {
+  background-color: #eaeaea;
+  border-radius: 1%;
+  padding: .5em;
+  margin-bottom: .5em;
+
+}
+
+div.chatberichten > ul {
+  flex-direction: column;
+}
+
+li {
+  text-decoration: none;
+}
+
+/**einde chat**/
+
+/**matches**/
+
+.matchcontainer {
+  margin-left: 2em;
+  margin-right: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.matchdiv {
+  border-radius: 1%;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  background-color: #eaeaea;
+  max-width: 20em;
+  padding: 1em;
+}
+
+/**einder matches**/
+
+/** API **/
+
+p.display {
+  display: block;
+}
+
+p.verberg {
+  display: none;
+}
+
+div#naarstap2klik {
+  padding: 1em;
+  background-color: red;
+}
+
+div#naarstap3klik {
+  padding: 1em;
+  background-color: red;
+}
+
+div.verberg {
+  display: none;
+}
+
+/** Einder API **/

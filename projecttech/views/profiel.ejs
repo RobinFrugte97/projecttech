@@ -1,0 +1,43 @@
+<%- include('partials/head.ejs') %>
+<header>
+  <h1>Profiel van <%= naam %></h1>
+  <div class="space">
+
+  </div>
+  <nav>
+      <ul>
+          <li><a href="/matches"><button>Terug</button></a></li>
+      </ul>
+  </nav>
+</header>
+<main class="profiel">
+    <p><%= naam %> 28 Jaar</p>
+    <p><%= geslacht %></p>
+    <img src="../uploads/<%= foto %>" alt="Profielfoto">
+    <br>
+    <h3>Bio:</h3>
+    <p>Ik ben opzoek naar een serieuze relatie!</p>
+    <p>Als jij dat ook bent, voel je dan vrij om </p>
+    <p>een bericht achter te laten!</p>
+    <br>
+    <h3>Chat met <%= naam %></h3>
+</main>
+<div class="chat">
+    <div class="chatberichten">
+      <ul>
+      <% for (var i = 0; i < chat.length; i++) { %>
+          <% if (chat[i].verzenderid == userid) {%>
+            <li class="rechtsbericht"><%= chat[i].bericht %></li>
+          <% } else { %>
+            <li class="linksbericht"><%= chat[i].bericht %></li>
+          <% } %>
+      <% } %>
+      </ul>
+    </div>
+    <form class="bleh" method="post">
+        <input type="text" name="bericht" value="">
+        <button>Verstuur</button>
+    </form>
+</div>
+
+    <%- include('partials/foot.ejs') %>

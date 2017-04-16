@@ -1,0 +1,47 @@
+<%- include('partials/head.ejs') %>
+  <header>
+      <h1>Serious dating</h1>
+      <div class="space">
+
+      </div>
+      <nav>
+          <ul>
+              <li><a href="/jouwprofiel"><button>Terug</button></a></li>
+          </ul>
+      </nav>
+  </header>
+    <h1>Instellingen</h1>
+    <main>
+        <form action="" method="post">
+            <label for="">Pas je wachtwoord aan:</label>
+            <input type="text" name="aanpassenwachtwoord">
+            <br>
+            <label for="">Pas je voorkeur aan:</label>
+            <br>
+            <br>
+            <label for="">Geslacht</label>
+            <select name="aanpassenopzoekgeslacht" id="">
+                <option value="Man">Man</option>
+                <option value="Vrouw">Vrouw</option>
+                <option value="Anders">Anders</option>
+            </select>
+            <br>
+            <br>
+            <fieldset>
+                <label for="">Leeftijd:</label>
+                <br>
+                <label for="">Van</label>
+                <input type="number" name="aanpassenminleeftijd" pattern=".{18,100}">
+                <label for="">Tot</label>
+                <input type="number" name="aanpassenmaxleeftijd" pattern=".{18,100}">
+            </fieldset>
+            <br>
+            <button>Verder</button>
+        </form>
+
+        <h3>Verwijder je account:</h3>
+        <p>WAARSCHUWING: Verwijderen is permanent!!!</p><br>
+        <a href="/verwijder">Verwijder account</a>
+    </main>
+
+    <%- include('partials/foot.ejs') %>
